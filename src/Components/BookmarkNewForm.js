@@ -1,6 +1,6 @@
-import axios from "axios";
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 
 const API = process.env.REACT_APP_API_URL;
 
@@ -16,14 +16,14 @@ function BookmarkNewForm() {
         },
         (error) => console.error(error)
       )
-      .catch((c) => console.warn("catch", c));
+      .catch((c) => console.warn('catch', c));
   };
 
   const [bookmark, setBookmark] = useState({
-    name: "",
-    url: "",
-    category: "",
-    is_favorite: false,
+    name: '',
+    url: '',
+    category: '',
+    is_favorite: false
   });
 
   const handleTextChange = (event) => {
